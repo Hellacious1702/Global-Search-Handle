@@ -1,0 +1,110 @@
+/* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap');
+
+/* Defining the root for CSS File */
+:root{
+    --bg-color : linear-gradient(45deg , blue, pink);
+    --google-color : linear-gradient(45deg , #e43e2b, #3b7ded);
+    --youtube-color : linear-gradient(45deg , #c3352e, #ffffff);
+    --twitch-color : linear-gradient(45deg , #392e5c, #9146ff);
+    --wikipedia-color : linear-gradient(45deg , #ef397b, #fabe31);
+    --spotify-color : linear-gradient(45deg , #1db954, #b3b3b3);
+    --search-box-color : #ffffff;
+    --outline-color : #000000;
+    --heading-text-color : #ffffff;
+
+    --border-radius : 20px;
+    --search-radius : 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'REM';
+}
+
+/* Styling Body */
+body{
+    background-image: var(--google-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Styling The Main Text Part on the page */
+.header{
+    margin: 20px;
+    margin-bottom: 40px;
+    font-size: 26px;
+    color: var(--heading-text-color);
+    text-align: center;
+}
+
+/* Styling the paragraph section on header */
+.header p{
+    margin: 30px;
+    text-align: center;
+    font-size: 20px;
+    width: 600px;
+}
+ 
+/* Styling the Main Section */
+.main{
+    display: flex;
+    align-items: center;
+}
+
+/* Styling The Search Box */
+.search-box{
+    background-color: var(--search-box-color);
+    border-radius: var(--border-radius);
+    outline: 2px solid var(--outline-color);
+    width: 800px;
+    height: 60px;
+    display: flex;
+    
+}
+
+/* Styling the Search Input */
+.search-input{
+    margin: 20px;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    width: 740px;
+    font-size: 16px;
+}
+
+/* Styling Search Button */
+#search {
+    margin: 10px;
+    padding: 15px;
+    outline: 2px solid var(--outline-color);
+    border-radius: var(--search-radius);
+    background-color: var(--search-box-color);
+    cursor: pointer;
+}
+
+/* Styling The Options Section */
+.options{
+    background-color: var(--search-box-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid var(--outline-color);
+    border-radius: var(--border-radius);
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* Styling the Search Option */
+#search-option{
+    outline: none;
+    font-size: 16px;
+    border: 1px solid var(--outline-color);
+    border-radius: var(--border-radius);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Linking The CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Defining the Title & adding a icon to the tab. -->
+    <title>Global Search | Varad Sandeep Naik</title>
+    <link rel="icon" type="image/png" href="Images/searchicon.png"/>
+</head>
+<body id="main-body">
+    <!-- Making The Header with Basic Textual Content -->
+    <div class="header">
+        <h1>Global Search Handle Project</h1>
+        <h3><i>By Varad Sandeep Naik</i></h3>
+        <p>This is a Basic Website Project Craeted with HTML , CSS and Javascript . Basic Purpose of this website is to simplify searching for content on any website . User can Directly Type What they are looking for and select the prefered platform from dropdown menu and directly search with convenience .</p>
+    </div>
+
+    <!-- Creating The Structure for Search Input and Search Button -->
+    <div class="main">
+        <div class="search-box">
+            <input type="text" class="search-input" id="inputSearch" placeholder="What You Want To Search On Google?">
+        </div>
+
+        <div class="search-button">
+            <label for="search">
+                <!-- Creating Button that also calls for searchSelector Function in Javascript -->
+                <button id="search" onclick="searchSelector()"><img src="Images/search.png" alt="search icon" height="20px" width="20px"></button>
+            </label>
+        </div>
+    </div>
+    
+    <!-- Creating The Structure for Search Options -->
+    <div class="options">
+        <h3>Search On - </h3>
+        <!-- Creating a Label For the Search Button -->
+        <label for="search-option">
+            <select name="Search On - " id="search-option" onclick="siteChange()">
+                <option value="Google" id="googleOption">Google</option>
+                <option value="Youtube" id="youtubeOption">Youtube</option>
+                <option value="WikiPedia" id="wikipediaOption">WikiPedia</option>
+                <option value="Twitch" id="twitchOption">Twitch</option>
+                <option value="Spotify" id="twitchOption">Spotify</option>
+            </select>
+        </label>
+    </div>
+    
+    <!-- Linking The Javascript File -->
+    <script src="script.js"></script>
+</body>
+</html>
