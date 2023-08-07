@@ -3,18 +3,24 @@
 
 /* Defining the root for CSS File */
 :root{
+    /* Element Colors */
     --bg-color : linear-gradient(45deg , blue, pink);
-    --google-color : linear-gradient(45deg , #e43e2b, #3b7ded);
-    --youtube-color : linear-gradient(45deg , #c3352e, #ffffff);
-    --twitch-color : linear-gradient(45deg , #392e5c, #9146ff);
-    --wikipedia-color : linear-gradient(45deg , #ef397b, #fabe31);
-    --spotify-color : linear-gradient(45deg , #1db954, #b3b3b3);
+    --google-color : linear-gradient(45deg , #008744, #0056e3 , #d62d20 , #ffa700 , #ffffff);
+    --youtube-color : linear-gradient(45deg , #363636, #3f4042 , #c3352e , #ac362e , #ffffff);
+    --twitch-color : linear-gradient(45deg , #383838, #6c4a7e	 , #a17cb8 , #c6b3d0 , #ecebe1);
+    --wikipedia-color : linear-gradient(45deg , #f8f9fa, #a2a9b1	 , #ffffff , #0645ad , #0b0080);
+    --spotify-color : linear-gradient(45deg , #232723, #62d089 , #e1ece3 , #457e59 , #a8b2a8);
     --search-box-color : #ffffff;
     --outline-color : #000000;
     --heading-text-color : #ffffff;
+    --Box-Shadow : 10px 10px 15px var(--black);
 
+    /* Basic Properties */
     --border-radius : 20px;
     --search-radius : 20px;
+
+    /* Basic Colors */
+    --black : #000000;
 }
 
 *{
@@ -26,12 +32,28 @@
 /* Styling Body */
 body{
     background-image: var(--google-color);
+    background-size: 400% 400%;
+    /* Adding animation for Infinite Background */
+    animation : Backgroundroll 30s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
     flex-direction: column;
+}
+
+/* Keyframes for the animation of infinite background */
+@keyframes Backgroundroll {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position:  100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 
 /* Styling The Main Text Part on the page */
@@ -65,7 +87,19 @@ body{
     width: 800px;
     height: 60px;
     display: flex;
-    
+    /* Adding animation to Search box */
+    animation: Inputin 3s ease-in 1;
+    /* Adding Box Shadow */
+    box-shadow: var(--Box-Shadow);
+}
+
+/* Search Box KeyFrames */
+@keyframes Inputin {
+    from{
+        width: 0%;
+    }to{
+        width: 100%;
+    }
 }
 
 /* Styling the Search Input */
@@ -76,6 +110,22 @@ body{
     outline: none;
     width: 740px;
     font-size: 16px;
+    /* Adding Animation to search Input */
+    animation: placeholderin 3s ease-in 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+
+/* Search Input KeyFrames */
+@keyframes placeholderin {
+    from{
+        visibility: visible;
+        width: 0%;
+    }to{
+        visibility: visible;
+        width: 100%;
+    }
 }
 
 /* Styling Search Button */
@@ -86,6 +136,8 @@ body{
     border-radius: var(--search-radius);
     background-color: var(--search-box-color);
     cursor: pointer;
+    /* Adding Box Shadow */
+    box-shadow: var(--Box-Shadow);
 }
 
 /* Styling The Options Section */
@@ -99,6 +151,8 @@ body{
     justify-content: center;
     margin: 10px;
     padding: 20px;
+    /* Adding Box Shadow */
+    box-shadow: var(--Box-Shadow);
 }
 
 /* Styling the Search Option */
