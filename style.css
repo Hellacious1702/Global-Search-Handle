@@ -162,3 +162,74 @@ body{
     border: 1px solid var(--outline-color);
     border-radius: var(--border-radius);
 }
+
+@media(max-width: 926px){
+
+    .header{
+        margin: 20px;
+        margin-bottom: 40px;
+        font-size: 26px;
+        color: var(--heading-text-color);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Styling The Main Text Part on the page */
+    .header{
+        margin: 20px;
+        margin-bottom: 40px;
+        font-size: 20px;
+        color: var(--heading-text-color);
+        text-align: center;
+        max-width: 300px;
+    }
+
+    /* Styling the paragraph section on header */
+    .header p{
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+        width: 300px;
+    }
+
+    /* Styling The Search Box */
+    .search-box{
+        background-color: var(--search-box-color);
+        border-radius: var(--border-radius);
+        outline: 2px solid var(--outline-color);
+        width: 300px;
+        height: 60px;
+        display: flex;
+        /* Adding animation to Search box */
+        animation: Inputin 2s ease-in 1;
+        /* Adding Box Shadow */
+        box-shadow: var(--Box-Shadow);
+    }
+
+    .search-input{
+        margin: 20px;
+        padding: 10px;
+        border: 0px;
+        outline: none;
+        width: 240px;
+        font-size: 16px;
+        /* Adding Animation to search Input */
+        animation: placeholderin 2s ease-in 1;
+        animation-delay: 3s;
+        visibility: hidden;
+        animation-fill-mode: forwards;
+    }
+
+    .search-input::placeholder{
+        font-size: 13px;
+    }
+
+    .options{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        max-height: 10px;
+    }
+}
